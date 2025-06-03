@@ -7,29 +7,25 @@ private $email;
 private $mobileNumber;
 private $password;
 
-public function setUserName($userName){
+public function __construct($userName,$email,$mobileNumber,$password)
+{
     $this->userName=$userName;
-}
-public function getUserName(){
-   return  $this->userName;
-}
-public function setEmail($email){
     $this->email=$email;
-}
-public function getEmail(){
-   return  $this->email;
-}
-public function setMobileNumber($mobileNumber){
     $this->mobileNumber=$mobileNumber;
-}
-public function getMobileNumber(){
-   return  $this->mobileNumber;
-}
-public function setPassword($password){
     $this->password=$password;
 }
-public function getPassword(){
+
+ public function getUserName(){
+   return   $this->userName;
+}
+ public function getEmail(){
+   return  $this->email;
+}
+ public function getMobileNumber(){
+   return  $this->mobileNumber;
+}
+ public function getPassword(){
    return  $this->password;
 }
 }
-  
+ 

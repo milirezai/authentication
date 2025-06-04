@@ -1,12 +1,13 @@
 <?php
 session_start();
+include ('./info/info.php');
  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>userPanel</title>
+    <title><?=  "panel : " . $information->userName ?></title>
     <link rel="stylesheet" href="assets/css/userPanel.css">
 
 </head>
@@ -21,18 +22,18 @@ session_start();
           <div class="information">
             <!-- item information -->
              <div class="items">
-                <h4>UserName <span class="text"></span> </h4>
+                <h4>UserName <span class="text"><?=  $information->userName ?></span> </h4>
               </div>
              <div class="items">
-                <h4>Email <span class="text"></span> </h4>
+                <h4>Email <span class="text"><?=  $information->email ?></span> </h4>
 
              </div>
              <div class="items ">
-                <h4>MobileNumber <span class="text"></span> </h4>
+                <h4>MobileNumber <span class="text"><?=  $information->mobileNumber ?></span> </h4>
 
              </div>
              <div class="items ">
-                <h4>Password <span class="text"></span> </h4>
+                <h4>Password <span class="text"><?=  $information->password ?></span> </h4>
              </div>
                        <!-- log out -->  
            <div class="logout">

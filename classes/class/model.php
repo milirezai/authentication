@@ -20,10 +20,10 @@ class model{
          return $stmt->rowCount(); 
              }
 
-      public function find($email,$password){
-        $query= "select * from `users` where email= :email and password= :password";
+      public function find($email){
+        $query= "select * from `users` where  email= :email";
         $stmt= $this->database->prepare($query);
-        $stmt->execute([':email'=>$email, ':password'=>$password]);
+        $stmt->execute([':email'=>$email]);
          return $stmt->fetch(PDO::FETCH_OBJ); 
       }
   }

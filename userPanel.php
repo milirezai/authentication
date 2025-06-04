@@ -1,6 +1,7 @@
 <?php
 session_start();
 include ('./info/info.php');
+include ('./auth/logout.php');
  ?>
 <!DOCTYPE html>
 <html lang="en">

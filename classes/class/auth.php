@@ -11,5 +11,11 @@ class auth{
     echo "error";
   }
     }
+    public function logout(){ 
+        if (isset($_GET['logout'])) {
+            session_unset();
+            header("location:http://localhost/authentication/");
+        }
+    }
     
 }

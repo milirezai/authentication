@@ -1,5 +1,6 @@
 <?php
 class auth{
+
     public function register($suerName,$email,$mobileNumber,$password){
   $valid= new validation();
  if ($valid->validUserName($suerName)&&$valid->validEmail($email)&&$valid->validMObileNumber($mobileNumber)&&$valid->validPassword($password)) {
@@ -10,4 +11,5 @@ class auth{
     echo "error";
   }
     }
+    
 }

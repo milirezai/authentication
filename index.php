@@ -11,13 +11,13 @@
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form method="post" >
+				<form method="post" action="auth/signup.php" >
 					<label for="chk" aria-hidden="true">Sign up</label>
-					<input type="text" name="username" placeholder="UserName" required="">
+					<input type="text" name="userName" placeholder="UserName" required="">
 					<input type="email" name="email" placeholder="Email" required="">
           <input type="text" name="mobileNumber" placeholder="MobileNumber" required="">
 					<input type="password" name="password" placeholder="Password" required="">
-					<button>Sign up</button>
+					<button type="submit" name="register">Sign up</button>
 				</form>
 			</div>
 

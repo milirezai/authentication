@@ -11,7 +11,7 @@
 		<input type="checkbox" id="chk" aria-hidden="true">
 
 			<div class="signup">
-				<form>
+				<form method="post" >
 					<label for="chk" aria-hidden="true">Sign up</label>
 					<input type="text" name="username" placeholder="UserName" required="">
 					<input type="email" name="email" placeholder="Email" required="">

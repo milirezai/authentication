@@ -17,5 +17,16 @@ class auth{
             header("location:http://localhost/authentication/");
         }
     }
+    public function login($email){
+      $login=new model();
+      $info=$login->find($email);  
+      session_start();
+       $_SESSION['email'] = $_POST['email'];
+        if ($info->email==$email) {
+          header("location: http://localhost/authentication/userPanel.php");
+       }else {
+          header("location: http://localhost/authentication");
+       }  
+    }
     
 }

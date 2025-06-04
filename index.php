@@ -22,11 +22,10 @@
 			</div>
 
 			<div class="login">
-				<form>
+				<form method="post" action="auth/login.php">
 					<label for="chk" aria-hidden="true">Login</label>
 					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="password" placeholder="Password" required="">
-					<button>Login</button>
+ 					<button type="submit" name="login">Login</button>
 				</form>
 			</div>
 	</div>

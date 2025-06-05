@@ -11,12 +11,6 @@ class auth{
     echo "error";
   }
     }
-    public function logout(){ 
-        if (isset($_GET['logout'])) {
-            session_unset();
-            header("location:http://localhost/authentication/");
-        }
-    }
     public function login($email){
       $login=new model();
       $info=$login->find($email);  
@@ -28,5 +22,12 @@ class auth{
           header("location: http://localhost/authentication");
        }  
     }
+    public function logout(){ 
+      if (isset($_GET['logout'])) {
+          session_unset();
+          header("location:http://localhost/authentication/");
+      }
+  }
+
     
 }

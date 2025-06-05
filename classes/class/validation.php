@@ -9,22 +9,18 @@ if (!empty($userName)) {
 
         if (strlen($userName) > 2) {
             return $this->validation=true;
-            // return "نام اوکی است";
-          }else {
+           }else {
             return $this->validation=false;
-            // return "طول نام کوتاه است";
-          }
+           }
 
     } else {
         return $this->validation=false;
-        // return "نوع نام رشته نیست";
-      }
+       }
 
 
  }else {
     return $this->validation=false;
-    // return "نام خالی است !";
-}
+ }
     }
 
     public function validEmail($email){
@@ -32,16 +28,13 @@ if (!empty($userName)) {
 
             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 return   $this->validation=true;
-                // return   "ایمیل اوکی است";
-               } else {
+                } else {
                   return  $this->validation=false;
-                //   return  "ایمیل نا معتبر است";
-               }
+                }
       
         }else {
            return $this->validation=false;
-        //    return "ایمیل خالی است";
-        }
+         }
         
     }
 
@@ -52,24 +45,19 @@ if (!empty($userName)) {
 
                 if (  strlen($mobileNumber) == 11 ) {
                     return  $this->validation=true;
-                    // return  "موبایل اوکی است";
-                 }elseif (strlen($mobileNumber) > 11) {
+                  }elseif (strlen($mobileNumber) > 11) {
                     return  $this->validation=false;
-                    // return  "تعداد عدد های موبایل بیشتر است";
-                 }else {
+                  }else {
                     return  $this->validation=false;
-                    // return  "تعداد عدد های موبایل کم است";
-                 }
+                  }
 
              } else {
                 return  $this->validation=false;
-                // return "فرمت موبایل عددی نیست";
-             }
+              }
     
         }else {
            return $this->validation=false;
-        //    return "موبایل خالی است";
-        }
+         }
         
     }
 
@@ -77,15 +65,12 @@ if (!empty($userName)) {
         if (!empty($password)) {
             if (strlen($password) >= 8) {
                 return $this->validation=true;
-                // return "پسورد اوکی است";
-            }else {
+             }else {
                 return $this->validation=false;
-                // return "طول پسورد کم تر از ۸ است";
-             }
+              }
         }else {
            return $this->validation=false;
-        //    return "پسورد خالی است";
-        }
+         }
         
 
     }

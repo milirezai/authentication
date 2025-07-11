@@ -2,7 +2,7 @@
   trait Query
 {
     # find
-    protected function find($email)
+    public function find($email)
     {
             $query= "SELECT * FROM `users` WHERE `email`=?";
             $stmt=DBConnection::DBConnection()->prepare($query);

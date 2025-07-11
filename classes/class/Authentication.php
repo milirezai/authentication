@@ -21,11 +21,11 @@ trait Authentication
         $info=$this->find($email);
         if ($info->email==$email)
         {
-            return "email is oki";
+            return true;
         }
         else
         {
-            return "email not found";
+            return false;
         }
     }
     public function logout()
@@ -33,7 +33,7 @@ trait Authentication
         if (isset($_GET['logout']))
         {
             session_unset();
-            echo "unset session";
+            header("location: http://localhost/authentication/index.php");
         }
     }
 }

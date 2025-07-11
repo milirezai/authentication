@@ -1,6 +1,5 @@
 <?php
-use PDOException;
  class Model
 {
-    use Query;
+    use Query,Authentication;
 }
